@@ -1,0 +1,94 @@
+/* flexible website model lesson */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font: bold 20px Tahoma;
+}
+
+h2 {
+    font: bold 14px Tahoma;
+}
+
+header,
+section,
+footer,
+article,
+nav,
+aside,
+hgroup {
+    display: block;
+}
+
+body {
+    width: 100%;
+    display: -webkit-box;
+    /* flexible box structure command*/
+    -webkit-box-pack: center;
+}
+
+#big_wrapper {
+    max-width: 1000px;
+    margin: 20px 0px;
+    background: chartreuse;
+    display: -webkit-box;
+    /* this is a box, it can change size. its children (elements) can change size */
+    /*if it has boxes inside, the parent has to be a box!*/
+    -webkit-box-orient: vertical;
+    /* the elements are block-managed, on top of eachother, and will place it side to side */
+    -webkit-box-flex: 1;
+    /* 1=the website is flexible, 0=not flexible */
+}
+
+#top_header {
+    background: yellow;
+    border: 3px solid black;
+    padding: 20px;
+}
+
+#top_menu {
+    background: blue;
+    color: white;
+    border: red;
+}
+
+#top_menu li {
+    font: bold 14px Tahoma;
+    padding: 5px;
+    display: inline-block;
+    list-style: none;
+}
+
+#new_div {
+    display: -webkit-box;
+    /*if there are boxes inside, the parent has to be a box!*/
+    -webkit-box-orient: horizontal;
+    /*the children elements will be side by side (not on top of eachother)*/
+}
+
+#main_section {
+    border: 1px solid blue;
+    -webkit-box-flex: 1;
+    /* this column of elements changes dynamically depending of how big is the browser */
+    margin: 20px;
+    padding: 20px;
+}
+
+#side_news {
+    border: 1px solid red;
+    width: 220px;
+    /* this column is not flexible: its a standard that one column is, the other is not. */
+    margin: 20px 20px;
+    padding: 30 px;
+    background: cornflowerblue;
+}
+
+#the_footer {
+    /* we don't have things floating left and right, so we don't need to clear the footer */
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid green;
+}
